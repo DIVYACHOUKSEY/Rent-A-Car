@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Meeting Rooms">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <ul>
+                    <template for:each={meetingRoomsInfo} for:item="room">
+                        <li key={room.roomName} style="padding: 10px">
+                            <c-meeting-room  show-room-info={room}  onclick={onTileSelecthandler}>
+                                <lightning-tile label={room.roomName} href="/path/to/somewhere" slot="roomInfo">
+                                    <p class="slds-truncate" title={meetingRoomInfo.roomCapacity}></p>
+                                </lightning-tile>
+                                <div>additional markup will go in unnamed</div>
+                            </c-meeting-room>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="8" padding="around-small">
+                You have selected :{selectedMeetingRoom}
+            </lightning-layout-item>
+             
+            </lightning-layout>
+        
+    </lightning-card>
+</template>
+
+

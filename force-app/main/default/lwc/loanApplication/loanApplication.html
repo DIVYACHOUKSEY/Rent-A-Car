@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Loan Application" label="Loan Application">
+            <lightning-input name="Loan Name" label ="Loan Name" onchange={loanNameChangeHandler}></lightning-input>
+          <!--- <c-customer-lookup    onselected={customerLookup}>
+             <p></p>
+            </c-customer-lookup>-->
+            <lightning-input name="Loan Amount" type="number" label ="loan Amount" onchange={loanAmountChangeHandler}></lightning-input>
+            <lightning-input  name="Interest Rate"  type="number" label ="Interest Rate" onchange={interstRateChangeHandler}></lightning-input>
+            <lightning-combobox name="Status" label="Status" placeholder="Open" value="Open" ></lightning-combobox>
+            <br>
+            <lightning-button label="Apply" onclick={applyLoan} variant="brand"></lightning-button>
+        </lightning-card>
+</template>
